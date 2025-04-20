@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minería de Datos COVID-19</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto flex items-center px-4">
+      <img src="assets/img/17371279.png" alt="Logo" class="h-12 mr-4">
+      <h1 class="text-2xl font-bold">Dataset</h1>
+      <nav class="space-x-4 ml-auto">
+        <a href="#inicio" class="hover:underline">Inicio</a>
+        <a href="#metodologia" class="hover:underline">Metodología</a>
+        <a href="#visualizaciones" class="hover:underline">Visualizaciones</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="bg-gray-100 py-20 text-center md:flex md:items-center md:justify-between">
+    <div class="md:w-1/2 md:pl-16">
+      <h2 class="text-4xl font-bold mb-4">Defunciones en Argentina</h2>
+      <p class="text-xl text-gray-600 mb-6">Explora las defunciones en Argentina</p>
+      <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Explorar</button>
+    </div>
+    <div class="md:w-1/2 md:mx-auto md:pl-12">
+      <img src="assets/img/mortality-1750704-1488752.webp" alt="Gráfico Principal" class="h-auto w-3/4">
+    </div>
+  </section>
+
+  <!-- Metodología -->
+  <section id="metodologia" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">Descripción del dataset</h3>
+      <a href="https://data.buenosaires.gob.ar/dataset/defunciones/resource/e685c2b3-7d89-4bd1-b926-941a68718c3a" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"> Fuente: Buenos Aires Data </a>
+      <p class="text-gray-700 mb-4">El dataset contiene información sobre las defunciones ocurridas en Argentina desde 1880 hasta 2024. Contiene variables como el año de defunción, la edad y el género de las personas fallecidas.</p>
+    </div>
+  </section>
+
+  <!-- Visualizaciones -->
+  <section id="visualizaciones" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-semibold mb-6">Visualizaciones</h3>
+      <div class="flex flex-col space-y-8">
+        <!-- Reemplazá estos contenedores por tus gráficos -->
+        <div class="bg-white shadow-md rounded-lg p-4 w-full">
+          <h4 class="text-xl font-bold mb-2">Defunciones por Año</h4>
+          <p class="text-gray-600 mb-4">Este gráfico muestra la cantidad de defunciones registradas en cada año desde 1880 hasta 2024. Es evidente que existen picos importantes que podrían estar relacionados con eventos sociales o sanitarios, como crisis económicas o pandemias.</p>
+          <img src="assets/img/defunciones_año.png" alt="Gráfico 1" class="h-auto w-full object-cover">
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 w-full">
+          <h4 class="text-xl font-bold mb-2">Defunciones por Genero</h4>
+          <p class="text-gray-600 mb-4">Este gráfico de barras compara la cantidad de defunciones entre hombres y mujeres en Argentina. Como se puede observar, los registros varían a lo largo de los años, lo que podría estar influenciado por diversos factores sociales y demográficos.</p>
+          <img src="assets/img/defunciones_genero.png" alt="Gráfico 2" class="h-auto w-full object-cover">
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-4 w-full">
+          <h4 class="text-xl font-bold mb-2">Defunciones por Genero y Año</h4>
+          <p class="text-gray-600 mb-4">Este gráfico analiza las defunciones desglosadas por género a lo largo de los años. Permite observar las tendencias temporales y comparar la evolución de las defunciones entre hombres y mujeres.</p>
+          <img src="assets/img/defunciones_genero_tiempo.png" alt="Gráfico 3" class="h-auto w-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 mt-10">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2025 Defunciones Argentina. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
