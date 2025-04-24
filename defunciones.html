@@ -3,74 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minería de Datos COVID-19</title>
+  <title>Defunciones Argentina</title>
+  <link rel="shortcut icon" href="assets/img/17371279.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <!-- Header -->
-  <header class="bg-gray-900 text-white py-6">
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<body class="text-gray-800 font-sans bg-gradient-to-br from-gray-100 to-white">
+  <header class="bg-gray-900 text-white py-6 shadow-lg">
     <div class="container mx-auto flex items-center px-4">
       <img src="assets/img/17371279.png" alt="Logo" class="h-12 mr-4">
-      <h1 class="text-2xl font-bold">Dataset</h1>
-      <nav class="space-x-4 ml-auto">
-        <a href="#inicio" class="hover:underline">Inicio</a>
-        <a href="#metodologia" class="hover:underline">Metodología</a>
-        <a href="#visualizaciones" class="hover:underline">Visualizaciones</a>
+      <h1 class="text-2xl font-bold tracking-wide">Estadísticas de Defunciones</h1>
+      <nav class="space-x-6 ml-auto text-sm uppercase font-medium tracking-wide">
+        <a href="#inicio" class="hover:text-blue-400 transition">Inicio</a>
+        <a href="#metodologia" class="hover:text-blue-400 transition">Metodología</a>
+        <a href="#visualizaciones" class="hover:text-blue-400 transition">Visualizaciones</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="inicio" class="bg-gray-100 py-20 text-center md:flex md:items-center md:justify-between">
-    <div class="md:w-1/2 md:pl-16">
-      <h2 class="text-4xl font-bold mb-4">Defunciones en Argentina</h2>
-      <p class="text-xl text-gray-600 mb-6">Explora las defunciones en Argentina</p>
-      <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Explorar</button>
+  <section id="inicio" class="relative  py-20 px-6 md:px-16 lg:px-32 flex flex-col md:flex-row items-center justify-center gap-12 overflow-hidden text-center md:text-left">
+  
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-30 blur-3xl z-0"></div>
+  
+
+    <div class="md:w-1/2 z-10">
+      <h2 class="text-5xl font-extrabold text-gray-800 leading-tight mb-4">
+        Defunciones en Argentina
+      </h2>
+      <p class="text-xl text-gray-500 font-medium mb-4">Análisis demográfico 1880 - 2024</p>
+      <p class="text-lg text-gray-600 mb-6">
+        Descubrí cómo varían las tasas de mortalidad por genero y año. Interactuá con visualizaciones detalladas y accedé a la dataset.
+      </p>
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-6 justify-center md:justify-start">
+        <div class="flex items-center gap-2 text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-4H5v4H3V9h2v4h4V9h2v8H9z" />
+          </svg>
+          Datos oficiales
+        </div>
+        <div class="flex items-center gap-2 text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 8 4-16 3 8h4" />
+          </svg>
+          Visualizaciones interactivas
+        </div>
+      </div>
+      <button onclick="location.href='#metodologia'"
+        class="bg-gray-900 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-blue-800 hover:scale-105 transform transition-all duration-300">
+        Explorar ahora
+      </button>
     </div>
-    <div class="md:w-1/2 md:mx-auto md:pl-12">
-      <img src="assets/img/mortality-1750704-1488752.webp" alt="Gráfico Principal" class="h-auto w-3/4">
+    <div class="md:w-1/2 max-w-sm z-10">
+      <img src="/assets/img/defunciones.jpg" alt="Gráfico Principal"
+        class="rounded-xl shadow-2xl w-full h-auto object-cover ring-4 ring-white">
     </div>
   </section>
-
-  <!-- Metodología -->
-  <section id="metodologia" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h3 class="text-3xl font-semibold mb-6">Descripción del dataset</h3>
-      <a href="https://data.buenosaires.gob.ar/dataset/defunciones/resource/e685c2b3-7d89-4bd1-b926-941a68718c3a" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"> Fuente: Buenos Aires Data </a>
-      <p class="text-gray-700 mb-4">El dataset contiene información sobre las defunciones ocurridas en Argentina desde 1880 hasta 2024. Contiene variables como el año de defunción, la edad y el género de las personas fallecidas.</p>
-    </div>
-  </section>
-
-  <!-- Visualizaciones -->
-  <section id="visualizaciones" class="bg-gray-50 py-16">
-    <div class="container mx-auto px-4">
-      <h3 class="text-3xl font-semibold mb-6">Visualizaciones</h3>
-      <div class="flex flex-col space-y-8">
-        <!-- Reemplazá estos contenedores por tus gráficos -->
-        <div class="bg-white shadow-md rounded-lg p-4 w-full">
-          <h4 class="text-xl font-bold mb-2">Defunciones por Año</h4>
-          <p class="text-gray-600 mb-4">Este gráfico muestra la cantidad de defunciones registradas en cada año desde 1880 hasta 2024. Es evidente que existen picos importantes que podrían estar relacionados con eventos sociales o sanitarios, como crisis económicas o pandemias.</p>
-          <img src="assets/img/defunciones_año.png" alt="Gráfico 1" class="h-auto w-full object-cover">
+  
+  <section id="metodologia" class="py-20">
+    <div class="container mx-auto px-4" data-aos="fade-up" data-aos-duration="800">
+      <div class=" shadow-2xl rounded-2xl p-10 max-w-6xl mx-auto">
+        <h3 class="text-4xl font-bold text-gray-800 mb-6 text-center">📊 Descripción del Dataset</h3>
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed text-center">
+          Este dataset, recopilado por el Gobierno de la Ciudad de Buenos Aires, contiene información detallada sobre las defunciones en Argentina desde 1880 hasta 2024.
+        </p>
+        <div class="md:flex md:space-x-10 mb-8">
+          <div class="md:w-1/2 mb-6 md:mb-0">
+            <h4 class="text-xl font-semibold text-gray-800 mb-4">📌 Variables Incluidas</h4>
+            <ul class="list-disc list-inside text-gray-700 mb-6 space-y-1">
+              <li>Fecha de defunción</li>
+              <li>Género</li>
+              <li>Descripción de subtipo</li>
+              <li>Año</li>
+            </ul>
+            <p class="text-gray-700">
+              Fuente oficial:
+              <a href="https://data.buenosaires.gob.ar/dataset/defunciones/resource/e685c2b3-7d89-4bd1-b926-941a68718c3a"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="text-blue-700 font-semibold hover:underline">
+                Buenos Aires Data 
+              </a>
+            </p>
+          </div>
+          <div class="md:w-1/2" >
+            <div class="border border-gray-900 rounded-lg overflow-hidden">
+              <div class="bg-blue-900 text-white px-4 py-2 text-lg font-semibold">📂 Vista Previa del Dataset</div>
+              <iframe src="tabla_defunciones.html" class="w-full h-[300px]"></iframe>
+            </div>
+          </div>
         </div>
-        <div class="bg-white shadow-md rounded-lg p-4 w-full">
-          <h4 class="text-xl font-bold mb-2">Defunciones por Genero</h4>
-          <p class="text-gray-600 mb-4">Este gráfico de barras compara la cantidad de defunciones entre hombres y mujeres en Argentina. Como se puede observar, los registros varían a lo largo de los años, lo que podría estar influenciado por diversos factores sociales y demográficos.</p>
-          <img src="assets/img/defunciones_genero.png" alt="Gráfico 2" class="h-auto w-full object-cover">
-        </div>
-        <div class="bg-white shadow-md rounded-lg p-4 w-full">
-          <h4 class="text-xl font-bold mb-2">Defunciones por Genero y Año</h4>
-          <p class="text-gray-600 mb-4">Este gráfico analiza las defunciones desglosadas por género a lo largo de los años. Permite observar las tendencias temporales y comparar la evolución de las defunciones entre hombres y mujeres.</p>
-          <img src="assets/img/defunciones_genero_tiempo.png" alt="Gráfico 3" class="h-auto w-full object-cover">
+        <div class="text-center mt-6">
+          <a href="dataset_limpio.csv" download
+             class="inline-block bg-blue-900 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md">
+             ⬇️ Descargar Dataset
+          </a>
         </div>
       </div>
     </div>
   </section>
+  
 
-  <!-- Footer -->
+  <section id="visualizaciones" class="py-16">
+    <div class="container px-4 max-w-6xl mx-auto">
+      <h3 class="text-4xl font-bold text-gray-800 mb-12 text-center">Visualizaciones</h3>
+  
+      <div class="space-y-12">
+        <div data-aos="fade-up" data-aos-duration="800" class="bg-white shadow-2xl rounded-2xl p-10 transition-transform transform hover:scale-[1.01] hover:shadow-xl">
+          <h4 class="text-2xl font-semibold text-gray-800 mb-4">📅 Defunciones por Año</h4>
+          <p class="text-gray-600 mb-6 leading-relaxed text-base">
+            Este gráfico muestra la cantidad de defunciones registradas en cada año desde 1880 hasta 2024. Es evidente que existen picos importantes que podrían estar relacionados con eventos sociales o sanitarios, como crisis económicas o pandemias.
+          </p>
+          <iframe 
+            src="/Defunciones_por_año.html" 
+            title="Defunciones por Año"
+            class="w-full h-[450px] rounded-lg border border-gray-200">
+          </iframe>
+        </div>
+  
+        
+        <div data-aos="fade-up" data-aos-duration="800" class="bg-white shadow-2xl rounded-2xl p-10 transition-transform transform hover:scale-[1.01] hover:shadow-xl">
+          <h4 class="text-2xl font-semibold text-gray-800 mb-4">🚻 Defunciones por Género</h4>
+          <p class="text-gray-600 mb-6 leading-relaxed text-base">
+            Este gráfico de barras compara la cantidad de defunciones entre hombres y mujeres en Argentina. Como se puede observar, los registros varían a lo largo de los años, lo que podría estar influenciado por diversos factores sociales y demográficos.
+          </p>
+          <iframe 
+            src="/Cantidad_genero.html" 
+            title="Defunciones por Género"
+            class="w-full h-[450px] rounded-lg border border-gray-200">
+          </iframe>
+        </div>
+  
+        
+        <div data-aos="fade-up" data-aos-duration="800" class="bg-white shadow-2xl rounded-2xl p-10 transition-transform transform hover:scale-[1.01] hover:shadow-xl">
+          <h4 class="text-2xl font-semibold text-gray-800 mb-4">📊 Defunciones por Género y Año</h4>
+          <p class="text-gray-600 mb-6 leading-relaxed text-base">
+            Este gráfico analiza las defunciones desglosadas por género a lo largo de los años. Permite observar las tendencias temporales y comparar la evolución de las defunciones entre hombres y mujeres.
+          </p>
+          <iframe 
+            src="/Defunciones_por_año_genero.html" 
+            title="Defunciones por Género y Año"
+            class="w-full h-[450px] rounded-lg border border-gray-200">
+          </iframe>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="800" class="bg-white shadow-2xl rounded-2xl p-10 transition-transform transform hover:scale-[1.01] hover:shadow-xl">
+          <h4 class="text-2xl font-semibold text-gray-800 mb-4">🦠 Defunciones en Cuarentena</h4>
+          <p class="text-gray-600 mb-6 leading-relaxed text-base">
+            Este gráfico analiza las defunciones desglosadas en los años de cuarentena por COVID-19. Permite observar las tendencias desde el año 2018 a 2024.
+          </p>
+          <iframe 
+            src="/Defunciones_cuarentena.html" 
+            title="Defunciones en tiempos de cuarentena"
+            class="w-full h-[450px] rounded-lg border border-gray-200">
+          </iframe>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
   <footer class="bg-gray-900 text-white py-6 mt-10">
     <div class="container mx-auto text-center">
       <p class="text-sm">&copy; 2025 Defunciones Argentina. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
